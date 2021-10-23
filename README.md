@@ -1,5 +1,5 @@
 # Vault42
-A personal or service user vault for storing and accessing credentials. Currently, it is limited to PowerShell use only, but I do intend to write a python GUI for it in the future.
+A personal or service user vault for storing and accessing credentials. Currently, it is limited to PowerShell use only, but I do intend to write a python GUI for it in the future. The idea behind this is to make a tool that is local to the device only and does not reside on outside resources. So if you're like me and skeptical of all things online, this may be a decent alternative to browser based password managers. 
 Download the current documentation here :
 
 - Initialize-Vault42.ps1 : This was created to make intial configuration as easy as possible. The intent is to have the Vault42.zip file pulled down, then the Initialize-Vault.ps1 script. Then, the user runs Initialize-Vault42 as admin, and the script will get everything in place to be used. The next step is to run the New-Vault.ps1 command to configure the vault.
@@ -10,7 +10,7 @@ Download the current documentation here :
     1 - add : This walks the user through adding a new credential set to the vault. 
     2 - set : Used to change a password/key value
     3 - rem : Used to remove a credential set. * THERE IS NO WAY OF RESTORING REMOVED CREDENTIALS *
-          Yes. This will not be altered to prevent accidental leakage or theft.
+          Yes, this is intentional. I will not alter this in an effort to prevent accidental leakage or theft.
     4 - get : used to get the plaintext version of the account requested. The screen will clear after you 
               press enter, and the plaintext version is lost to the ether. You cannot scroll up, it does not
               show in history. 
